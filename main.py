@@ -2,7 +2,7 @@ import sys
 import subprocess
 def install_packages():
     try:
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'requirements.txt'])
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'scikit-learn'])
     except subprocess.CalledProcessError as e:
         print(f"Error installing packages: {e}")
         sys.exit(1)
