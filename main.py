@@ -1,3 +1,15 @@
+import sys
+import subprocess
+def install_packages():
+    try:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'requirements.txt'])
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing packages: {e}")
+        sys.exit(1)
+
+# Install required packages
+install_packages()
+
 import streamlit as st
 from sklearn import datasets
 import numpy as np
